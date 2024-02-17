@@ -7,12 +7,12 @@ const Onboardingtwo = ({ handlecount }) => {
       className="px-20 py-16 rounded-md text-center relative border border-blue-500"
       style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
     >
-      <h1 className="text-3xl font-bold z-50">
+      <h1 className="text-4xl font-bold z-50">
         Hi There!
         <br />
         What do we call you...?
       </h1>
-      <div className="flex flex-col">
+      <div className="flex flex-col pt-2">
         <label className="flex items-center gap-2 opacity-70 text-sm mt-5">
           Name
         </label>

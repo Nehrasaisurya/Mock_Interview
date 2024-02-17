@@ -20,8 +20,8 @@ const Onboardingthree = ({ handlecount }) => {
         className="p-20 rounded-md text-center relative border border-blue-500"
         style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
       >
-        <h1 className="text-3xl font-bold z-50">Upload your Resume</h1>
-        <h1 className="text-sm mt-3">
+        <h1 className="text-4xl font-bold z-50">Upload Your Resume</h1>
+        <h1 className="text-md opacity-70 mt-3">
           To provide you with tailored mock interviews, please upload <br />
           your resume. This will help us suggest relevant
           <br /> interviews based on your background.
@@ -53,13 +53,17 @@ const Onboardingthree = ({ handlecount }) => {
           </button>
         </div>
       </div>
-      <div className="w-full h-3 bg-gray-100 rounded-full mt-7 relative">
-        <div
-          className={`h-3 absolute left-0 bg-green-500 rounded-full ${
-            fileName ? "w-full" : "w-0"
-          } transition-all duration-600 ease-out`}
-        ></div>
-      </div>
+      {fileName ? (
+        <div className="w-full h-3 bg-gray-100 rounded-full mt-7 relative">
+          <div
+            className={`h-3 absolute left-0 bg-green-500 rounded-full ${
+              fileName ? "w-full" : "w-0"
+            } transition-all duration-1000 ease-in-out`}
+          ></div>
+        </div>
+      ) : (
+        <div className="w-full h-3 bg-transparent rounded-full mt-7 relative "></div>
+      )}
     </div>
   );
 };

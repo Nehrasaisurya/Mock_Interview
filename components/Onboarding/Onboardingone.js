@@ -4,11 +4,11 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Onboardingone = ({ handlecount }) => {
   return (
     <div
-      className="p-20 rounded-md text-center relative border border-blue-500"
+      className="px-16 py-20 rounded-md text-center relative border border-blue-500"
       style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
     >
-      <h1 className="text-3xl font-bold z-50">Welcome to Platform name</h1>
-      <h1 className="text-sm mt-3">
+      <h1 className="text-4xl font-bold z-50">Welcome to Platform name</h1>
+      <h1 className="text-md opacity-70 mt-3">
         Enhance your mock interview experience by personalizing <br />
         your preferences. Let's get started!
       </h1>
