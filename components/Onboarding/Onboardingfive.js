@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const data = [
   {
@@ -29,7 +33,7 @@ const Onboardingfive = ({ handlecount }) => {
     setinterviewer(item);
   };
   return (
-    <div className="flex gap-20 items-start">
+    <div className="flex gap-10 items-start" data-aos="fade-left">
       <div
         className="px-16 py-16 rounded-md text-center relative border border-blue-500"
         style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}

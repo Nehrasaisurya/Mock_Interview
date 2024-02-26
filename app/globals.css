@@ -10,3 +10,12 @@
 .body {
   font-family: myfont;
 }
+
+.active {
+  background-color: #e8eaf0;
+  color: #1d4ed8;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

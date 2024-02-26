@@ -4,6 +4,11 @@ import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { LuFilePlus2 } from "react-icons/lu";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
 const Onboardingthree = ({ handlecount }) => {
   const [fileName, setFileName] = useState("");
 
@@ -17,8 +22,9 @@ const Onboardingthree = ({ handlecount }) => {
   return (
     <div>
       <div
-        className="p-20 rounded-md text-center relative border border-blue-500"
+        className=" p-10 md:p-20 rounded-md text-center relative border border-blue-500"
         style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
+        data-aos="fade-left"
       >
         <h1 className="text-4xl font-bold z-50">Upload Your Resume</h1>
         <h1 className="text-md opacity-70 mt-3">
@@ -58,7 +64,7 @@ const Onboardingthree = ({ handlecount }) => {
           <div
             className={`h-3 absolute left-0 bg-green-500 rounded-full ${
               fileName ? "w-full" : "w-0"
-            } transition-all duration-1000 ease-in-out`}
+            } transition-transform duration-700 `}
           ></div>
         </div>
       ) : (

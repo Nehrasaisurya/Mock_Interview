@@ -1,11 +1,16 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const Onboardingtwo = ({ handlecount }) => {
   return (
     <div
-      className="px-20 py-16 rounded-md text-center relative border border-blue-500"
+      className="p-10 md:px-20 md:py-16 rounded-md text-center relative border border-blue-500"
       style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
+      data-aos="fade-left"
     >
       <h1 className="text-4xl font-bold z-50">
         Hi There!

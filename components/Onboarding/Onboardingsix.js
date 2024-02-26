@@ -3,6 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { VscLoading } from "react-icons/vsc";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Link from "next/link";
+
+AOS.init();
 
 const Onboardingsix = ({ handlecount }) => {
   const [loading, setloading] = useState(false);
@@ -19,6 +24,7 @@ const Onboardingsix = ({ handlecount }) => {
     <div
       className="px-16 py-16 rounded-md text-center relative border border-blue-500"
       style={{ boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}
+      data-aos="fade-left"
     >
       <h1 className="text-4xl font-bold z-50">System Requirements Check</h1>
       <h1 className="text-md opacity-70 mt-3">
@@ -49,13 +55,15 @@ const Onboardingsix = ({ handlecount }) => {
           </div>
         </div>
       </div>
-      <button
-        className="bg-[#1F2544] text-white py-2 font-semibold rounded-md mt-10 w-6/12 mx-auto flex justify-center items-center gap-2"
-        onClick={handlecount}
-      >
-        Next
-        <FaArrowRightLong className="text-xs" />
-      </button>
+      <Link href={"/interview"}>
+        <button
+          className="bg-[#1F2544] text-white py-2 font-semibold rounded-md mt-10 w-6/12 mx-auto flex justify-center items-center gap-2"
+          onClick={handlecount}
+        >
+          Next
+          <FaArrowRightLong className="text-xs" />
+        </button>
+      </Link>
     </div>
   );
 };

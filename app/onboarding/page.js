@@ -23,20 +23,26 @@ const page = () => {
   };
   return (
     <div className=" flex flex-col items-center justify-center">
-      <div className="flex items-center justify-center gap-3 w-9/12 fixed top-24">
-        <button onClick={handlecountback}>
-          <IoIosArrowRoundBack className="text-2xl opacity-70" />
-        </button>
-        <div className="w-[75%] bg-gray-100 h-3 rounded-md relative">
+      <div className="flex items-center justify-center gap-3 w-9/12 fixed top-16 lg:top-20 xl:top-24">
+        {count > 1 ? (
+          <button onClick={handlecountback}>
+            <IoIosArrowRoundBack className="text-2xl opacity-70" />
+          </button>
+        ) : (
+          <button onClick={handlecountback} disabled>
+            <IoIosArrowRoundBack className="text-2xl opacity-0" />
+          </button>
+        )}
+        <div className="w-[75%] bg-gray-100 h-3 rounded-md ">
           <div
             style={{
-              width: `${count * 16.6}%`,
+              width: `${count * 16.67}%`,
             }}
-            className="rounded-md absolute left-0 top-0 bg-[#0066FF] h-3 duration-700 transform"
+            className="rounded-md bg-[#0066FF] h-3 duration-700 transform"
           ></div>
         </div>
       </div>
-      <div className="w-full min-h-screen flex items-center justify-center">
+      <div className="w-full h-screen flex items-center justify-center p-10">
         {count === 1 && <Onboardingone handlecount={handlecount} />}
         {count === 2 && <Onboardingtwo handlecount={handlecount} />}
         {count === 3 && <Onboardingthree handlecount={handlecount} />}
