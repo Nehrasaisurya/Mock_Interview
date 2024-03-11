@@ -1,6 +1,6 @@
 import React from "react";
 
-const Rules = () => {
+const Rules = ({ handlecount }) => {
   return (
     <div
       className="p-16 rounded-md text-center relative border border-blue-500"
@@ -41,7 +41,10 @@ const Rules = () => {
           </h1>
         </div>
       </div>
-      <button className="bg-[#1F2544] text-white py-2 font-semibold rounded-md mt-10 w-6/12 mx-auto flex justify-center items-center gap-2">
+      <button
+        className="bg-[#1F2544] text-white py-2 font-semibold rounded-md mt-10 w-6/12 mx-auto flex justify-center items-center gap-2"
+        onClick={handlecount}
+      >
         Next
       </button>
     </div>
