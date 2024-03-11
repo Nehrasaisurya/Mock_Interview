@@ -171,7 +171,7 @@ const Onboardingfour = ({ handlecount }) => {
           </div>
           <div>
             <button
-              className="bg-[#1F2544] text-white py-2 font-semibold rou nded-md mt-10 px-5  flex justify-center items-center gap-2"
+              className="bg-[#1F2544] text-white py-2 font-semibold rou nded-md mt-10 px-5  flex justify-center items-center gap-2 rounded-md"
               onClick={handlecount}
             >
               Start Interview

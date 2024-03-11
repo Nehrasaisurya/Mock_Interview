@@ -25,8 +25,17 @@ const Webcam = () => {
   };
 
   return (
-    <div id="container">
-      <video id="videoElement" ref={videoRef} autoPlay />
+    <div
+      id="container"
+      className="absolute top-10 right-10"
+      style={{ boxShadow: "0 0 5px rgba(0,0,0,0.1)" }}
+    >
+      <video
+        id="videoElement"
+        ref={videoRef}
+        autoPlay
+        className=" w-[800px] h-[450px]"
+      />
       <button id="startButton" ref={startButtonRef} onClick={handleStartStream}>
         Start Camera
       </button>

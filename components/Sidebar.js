@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const path = usePathname();
-  const pathname = path.slice(5);
+  const pathname = path;
 
   const isDashboardActive = pathname === "/dashboard";
   const isCreditActive = pathname === "/credits";
@@ -25,7 +25,7 @@ const Sidebar = () => {
       </div>
       <div className="mt-44 text-2xl flex flex-col gap-6 ">
         <Link
-          href={"/main/dashboard"}
+          href={"/dashboard"}
           className={`flex flex-col items-center p-3 rounded-md ${
             isDashboardActive ? "active" : null
           }`}
@@ -33,19 +33,19 @@ const Sidebar = () => {
           <GoHome />
         </Link>
         <Link
-          href={"/main/credits"}
+          href={"/credits"}
           className={` p-3 rounded-md ${isCreditActive ? "active" : null}`}
         >
           <GiTwoCoins />
         </Link>
         <Link
-          href={"/main/analytics"}
+          href={"/analytics"}
           className={` p-3 rounded-md ${isAnalyticsActive ? "active" : null}`}
         >
           <SiGoogleanalytics />
         </Link>
         <Link
-          href={"/main/notification"}
+          href={"/notification"}
           className={` p-3 rounded-md ${
             isNotificationActive ? "active" : null
           }`}

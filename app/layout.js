@@ -1,4 +1,6 @@
+import Sidebar from "@/components/Sidebar";
 import "./globals.css";
+import Top from "@/components/Top";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`body`}>{children}</body>
+      <body className={`body`}>
+        <div>{children}</div>
+      </body>
     </html>
   );
 }

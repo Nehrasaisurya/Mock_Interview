@@ -20,6 +20,41 @@ const Onboardingsix = ({ handlecount }) => {
     return () => clearTimeout(timer);
   }, []);
 
+  const [hasCameraAccess, setHasCameraAccess] = useState(false);
+  const [hasMicrophoneAccess, setHasMicrophoneAccess] = useState(false);
+  const [isOnline, setIsOnline] = useState(navigator.onLine);
+  const handleStartStream = async () => {
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: true,
+      });
+      setHasCameraAccess(true);
+      setHasMicrophoneAccess(true);
+    } catch (error) {
+      console.log("something went wrong");
+    }
+  };
+  handleStartStream();
+
+  useEffect(() => {
+    const handleOnline = () => {
+      setIsOnline(true);
+    };
+
+    const handleOffline = () => {
+      setIsOnline(false);
+    };
+
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, []);
+
   return (
     <div
       className="px-16 py-16 rounded-md text-center relative border border-blue-500"
@@ -34,11 +69,15 @@ const Onboardingsix = ({ handlecount }) => {
       <div className="flex items-center justify-center">
         <div className="flex flex-col items-start mt-6 gap-2 text-lg my-4">
           <div className="flex items-center justify-start gap-3">
-            {loading ? "✅" : <VscLoading className="animate-spin" />}
+            {hasMicrophoneAccess ? (
+              "✅"
+            ) : (
+              <VscLoading className="animate-spin" />
+            )}
             <h1>🎙️ Microphone Permission</h1>
           </div>
           <div className="flex items-center justify-start gap-3">
-            {loading ? "✅" : <VscLoading className="animate-spin" />}
+            {hasCameraAccess ? "✅" : <VscLoading className="animate-spin" />}
             <h1>🎥 Camera Permission </h1>
           </div>
           <div className="flex items-center justify-start gap-3">
@@ -50,7 +89,7 @@ const Onboardingsix = ({ handlecount }) => {
             <h1>💻 Other Windows</h1>
           </div>
           <div className="flex items-center justify-start gap-3">
-            {loading ? "✅" : <VscLoading className="animate-spin" />}
+            {isOnline ? "✅" : <VscLoading className="animate-spin" />}
             <h1>🌐 Stable Internet Connection</h1>
           </div>
         </div>
