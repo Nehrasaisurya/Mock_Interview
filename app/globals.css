@@ -18,3 +18,10 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+#home {
+  background-image: url("../public/Images/home.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
