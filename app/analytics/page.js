@@ -2,9 +2,7 @@ import React from "react";
 import { PiMonitorLight } from "react-icons/pi";
 import { FaRankingStar } from "react-icons/fa6";
 import { GiEarthAfricaEurope } from "react-icons/gi";
-import BarChart from "@/components/BarChart";
-import LineChart from "@/components/LineChart";
-import Example from "@/components/LineChart";
+
 import Sidebar from "@/components/Sidebar";
 import Top from "@/components/Top";
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { MdOutlineMailOutline } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
 
@@ -45,11 +46,18 @@ const page = () => {
             <div className="border-b w-3/12 mr-auto"></div>
           </div>
           <div
-            className="flex items-center gap-3 px-4 py-3 rounded-md  mt-10 justify-center cursor-pointer border border-gray-200"
-            style={{ boxShadow: "0 0 4px rgba(0,0,0,0.1" }}
+            className="flex items-center gap-3 px-4 py-3 rounded-md mt-10 justify-center cursor-pointer border border-gray-200"
+            style={{ boxShadow: "0 0 3px rgba(0,0,0,0.1" }}
           >
             <FcGoogle className="text-2xl" />
             <h1>Sign in with google</h1>
+          </div>
+          <div
+            className="flex items-center gap-3 px-4 py-3 rounded-md mt-5 justify-center cursor-pointer border border-gray-200"
+            style={{ boxShadow: "0 0 3px rgba(0,0,0,0.1" }}
+          >
+            <FaGithub className="text-2xl" />
+            <h1>Sign in with github</h1>
           </div>
           <h1 className="text-sm text-center mt-5">
             By continuing, you agree to our
