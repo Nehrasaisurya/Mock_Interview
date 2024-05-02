@@ -2,22 +2,19 @@ import React from "react";
 
 const Aboutpage = () => {
   return (
-    <div className="bg-white py-32 px-20 flex items-center justify-evenly">
-      <div className="w-5/12">
-        <h1 className="text-5xl font-bold">
-          Empowering individuals to excel through effective interview
-          preparation.
-        </h1>
+    <div className="bg-white py-32 px-20">
+      <div className="text-center">
+        <h1 className="opacity-70 text-sm">About Us</h1>
+        <h1 className="text-6xl font-extrabold">Empowering Individuals</h1>
         <h1 className="opacity-80 mt-4">
-          With a team of experienced professionals and cutting-edge technology,
-          we're dedicated to helping you tackle tough interview questions,
-          refine your communication skills, and stand out in today's competitive
-          job market. Join us on this journey to career advancement and unlock
-          your full potential
+          Our virtual mock interview platform provides a seampless and
+          interactive experience,
+          <br />
+          allowing you to practice interviews with experienced professional.
         </h1>
       </div>
-      <div className="w-4/12">
-        <img src="./Images/about.png" />
+      <div className="w-9/12 mx-auto">
+        <img src="./Images/sideheading.png" />
       </div>
     </div>
   );
