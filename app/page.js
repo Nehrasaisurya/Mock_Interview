@@ -1,4 +1,5 @@
 import Aboutpage from "@/components/Pages/Aboutpage";
+import Featurespage from "@/components/Pages/Featurespage";
 import Homepage from "@/components/Pages/Homepage";
 import Marquee from "@/components/Pages/Marquee";
 
@@ -10,6 +11,7 @@ const page = () => {
       <Homepage />
       <Marquee />
       <Aboutpage />
+      <Featurespage />
     </main>
   );
 };
