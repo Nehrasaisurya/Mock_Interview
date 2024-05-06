@@ -11,9 +11,9 @@ const Marquee = () => {
     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/a2b3c3709ffedce2a22a.png",
   ];
   return (
-    <div className="w-full py-20 relative flex items-center justify-center">
+    <div className="w-full py-20 px-10 relative flex items-center justify-center">
       <div className="w-full h-fit flex items-center justify-center flex-col">
-        <div className=" flex w-[800px] overflow-hidden select-none ">
+        <div className=" flex w-[400px] lg:w-[800px] overflow-hidden select-none ">
           <div className=" flex-shrink-0 flex items-center justify-center whitespace-nowrap width-[100%] marqueegroup">
             {row1.map((el) => (
               <div className="grid place-items-center w-[200px] p-5 ">

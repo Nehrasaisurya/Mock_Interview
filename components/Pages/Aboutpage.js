@@ -23,7 +23,7 @@ const data = [
 
 const Aboutpage = () => {
   return (
-    <div className="bg-white py-32 px-20 flex justify-evenly">
+    <div className="bg-white py-32 px-10 lg:px-20 flex flex-col lg:flex-row justify-evenly">
       <div className="text-center ">
         <h1 className="opacity-70 text-sm">About Us</h1>
         <h1 className="text-6xl font-extrabold">Empowering Individuals</h1>
